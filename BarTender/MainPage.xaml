@@ -1,7 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:BarTender" x:Class="BarTender.MainPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:BarTender" 
+             x:Class="BarTender.MainPage"
+             NavigationPage.HasNavigationBar="False">
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        
+        
+
+        <Grid Grid.Row="2" Margin="3,0">
+            <Button x:Name="btnGoToList" Text="Show All Cocktails" Clicked="btnGoToList_Clicked" />
+        </Grid>
+       
     </StackLayout>
 </ContentPage>

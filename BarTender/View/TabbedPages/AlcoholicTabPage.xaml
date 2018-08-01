@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:CustomControls="clr-namespace:BarTender.CustomControls"
+             x:Class="BarTender.View.TabbedPages.AlcoholicTabPage"
+             NavigationPage.HasNavigationBar="True"
+             BackgroundColor="White">
+    <ContentPage.Content >
+        <StackLayout Margin="16,0" >
+
+            <Label Text="Loading, please wait..." x:Name="lblLoading" IsVisible="False" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+            <ListView  x:Name="lvwCocktails" RowHeight="200" ItemSelected="lvwCocktails_Itemseleceted">
+                <!--Please uncomment the itemtemplate below AFTER you tested the itemssource as text-->
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <CustomControls:ExtendedViewCell SelectedBackgroundColor="White">
+                            <Grid>
+                                <Frame BackgroundColor="White" Margin="16" Padding="0">
+                                    <Grid RowSpacing="0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="3*" />
+                                            <RowDefinition Height="1*" />
+                                            <RowDefinition Height="0.75*" />
+                                        </Grid.RowDefinitions>
+                                        <Image Source="{Binding strDrinkThumb}" Grid.RowSpan="3" Aspect="AspectFill" />
+                                        <Label Text="{Binding strDrink}" Grid.Row="1" FontSize="Medium" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"  BackgroundColor="#BB000000" TextColor="White"  />
+                                        <Label Text="Click for details" Grid.Row="2" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"  BackgroundColor="#BB000000" TextColor="White"  />
+                                    </Grid>
+                                </Frame>
+                            </Grid>
+                        </CustomControls:ExtendedViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <!-- knop die bij elke klik een aantal records extra toevoegt aan lvwFoods -->
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
