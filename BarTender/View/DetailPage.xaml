@@ -21,6 +21,7 @@
                                 <RowDefinition Height="0.75*" />
                             </Grid.RowDefinitions>
                             <Image x:Name="imgCocktail" Grid.RowSpan="3" Aspect="AspectFill" />
+                            <Label x:Name="lblId" IsVisible="False"/>
                             <Label x:Name="lblName" Grid.Row="1" FontSize="Medium" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"  BackgroundColor="#BB000000" TextColor="White"  />
                             <Label x:Name="lblCategory" Grid.Row="2" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"  BackgroundColor="#BB000000" TextColor="White"  />
 
@@ -41,6 +42,8 @@
                         </Grid>
                         <Label Text="Instructions" FontSize="Large" TextColor="Black" HorizontalTextAlignment="Center" />
                         <Label x:Name="lblDescription"  HorizontalTextAlignment="Center" />
+                        <Button Text="Save" Clicked="OnSaveClicked" x:Name="btnSave" IsVisible="True"/>
+                        <Button Text="Delete" Clicked="OnDeleteClicked" x:Name="btnDelete" IsVisible="True" />
                     </StackLayout>
                 </Grid>
             </ScrollView>

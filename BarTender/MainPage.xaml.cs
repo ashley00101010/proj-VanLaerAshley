@@ -8,16 +8,13 @@ using Xamarin.Forms;
 
 namespace BarTender
 {
-    public partial class MainPage : ContentPage
+    public partial class MainPage : TabbedPage
     {
         public MainPage()
         {
             InitializeComponent();
         }
 
-        private void btnGoToList_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new CocktailListTP());
-        }
+       
     }
 }

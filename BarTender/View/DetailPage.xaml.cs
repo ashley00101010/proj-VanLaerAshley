@@ -1,4 +1,5 @@
 ﻿using BarTender.Model;
+using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,19 +11,24 @@ using Xamarin.Forms.Xaml;
 
 namespace BarTender.View
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class DetailPage : ContentPage
-	{
-		public DetailPage (RootObjectDrinks id)
-		{
-			InitializeComponent ();
-            showCocktail(id);
-
-        }
-        private async void showCocktail(RootObjectDrinks id)
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class DetailPage : ContentPage
+    {
+        readonly SQLiteAsyncConnection database;
+        public DetailPage(RootObjectDrinks item)
         {
-            RootObjectDrinks Cocktail = await CocktailManager.GetCocktailsById(id.drinks[0].idDrink);
+            InitializeComponent();
+            showCocktail(item);
+            ShowButtons(item);
+        }
+
+
+
+        private async void showCocktail(RootObjectDrinks item)
+        {
+            RootObjectDrinks Cocktail = await CocktailManager.GetCocktailsById(item.drinks[0].idDrink);
             imgCocktail.Source = Cocktail.drinks[0].strDrinkThumb;
+            lblId.Text = Cocktail.drinks[0].idDrink;
             lblName.Text = Cocktail.drinks[0].strDrink;
             lblCategory.Text = Cocktail.drinks[0].strCategory;
             lblDescription.Text = Cocktail.drinks[0].strInstructions;
@@ -46,6 +52,56 @@ namespace BarTender.View
 
             lblIngredients1.Text = Ingredients1;
             lblIngredients2.Text = Ingredients2;
+
+
+
+        }
+
+        async void OnSaveClicked(object sender, EventArgs e, RootObjectDrinks item)
+        {
+
+            await App.Database.SaveItemAsync(new DrinkLocal
+            {
+                idDrink = lblId.Text,
+                strDrink = lblName.Text,
+                strDrinkThumb = imgCocktail.Source.ToString().Replace("Uri: ", "")
+            });
+            await Navigation.PopAsync();
+        }
+
+        async void OnDeleteClicked(object sender, EventArgs e)
+        {
+            await App.Database.DeleteItemAsync(new DrinkLocal()
+            {
+                idDrink = lblId.Text,
+                strDrink = lblName.Text,
+                strDrinkThumb = imgCocktail.Source.ToString()
+            });
+            await Navigation.PopAsync();
+        }
+        private void ShowButtons(RootObjectDrinks item)
+        {
+            base.OnAppearing();
+            var drink = item.drinks[0].idDrink;
+            string drinkId = "";
+            try
+            {
+                drinkId = App.Database.GetDrink(drink).Result.idDrink.ToString();
+            }
+            catch
+            {
+                drinkId = "";
+            }
+            if (drinkId != item.drinks[0].idDrink || drinkId == null)
+            {
+                btnDelete.IsVisible = false;
+                btnSave.IsVisible = true;
+            }
+            else
+            {
+                btnDelete.IsVisible = true;
+                btnSave.IsVisible = false;
+            }
 
         }
     }

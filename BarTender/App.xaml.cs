@@ -1,8 +1,10 @@
+using BarTender.Data;
 using BarTender.View;
 using Plugin.Connectivity;
 using Plugin.Connectivity.Abstractions;
 using System;
 using System.Diagnostics;
+using System.IO;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,11 +13,27 @@ namespace BarTender
 {
     public partial class App : Application
     {
+
+        static BarTenderLocalDatabase database;
         public App()
         {
             InitializeComponent();
             MainPage = new NavigationPage(CrossConnectivity.Current.IsConnected ? (Page)new MainPage() : new NoNetworkPage());
         }
+
+        public static BarTenderLocalDatabase Database
+        {
+            get
+            {
+                if (database == null)
+                {
+                    database = new BarTenderLocalDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "BarTenderAppsSQLite.db3"));
+                }
+                return database;
+            }
+        }
+
+        public int ResumeAtDrinkId { get; set; }
 
         protected override void OnStart()
         {

@@ -1,8 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Paths>
-  <Jars />
-  <ResolvedResourceDirectories />
-  <ResolvedAssetDirectories />
+  <Jars>
+    <Jar>obj\Debug\lp\1\jl\formsviewgroup.jar</Jar>
+    <Jar>C:\Users\Ashley\Desktop\Device-project\proj-VanLaerAshley\BarTender.Android\obj\Debug\lp\1\jl\formsviewgroup.jar</Jar>
+  </Jars>
+  <ResolvedResourceDirectories>
+    <ResolvedResourceDirectory>C:\Users\Ashley\Desktop\Device-project\proj-VanLaerAshley\BarTender.Android\obj\Debug\lp\6\jl\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Users\Ashley\Desktop\Device-project\proj-VanLaerAshley\BarTender.Android\obj\Debug\lp\7\jl\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Users\Ashley\Desktop\Device-project\proj-VanLaerAshley\BarTender.Android\obj\Debug\lp\8\jl\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Users\Ashley\Desktop\Device-project\proj-VanLaerAshley\BarTender.Android\obj\Debug\lp\9\jl\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Users\Ashley\Desktop\Device-project\proj-VanLaerAshley\BarTender.Android\obj\Debug\lp\10\jl\res</ResolvedResourceDirectory>
+  </ResolvedResourceDirectories>
+  <ResolvedAssetDirectories>
+    <ResolvedAssetDirectory>obj\Debug\lp\6\jl\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\lp\7\jl\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\lp\8\jl\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\lp\9\jl\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\lp\10\jl\assets</ResolvedAssetDirectory>
+  </ResolvedAssetDirectories>
   <ResolvedEnvironmentFiles />
-  <ResolvedResourceDirectoryStamps />
+  <ResolvedResourceDirectoryStamps>
+    <ResolvedResourceDirectoryStamp>C:\Users\Ashley\Desktop\Device-project\proj-VanLaerAshley\BarTender.Android\obj\Debug\lp\6.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Users\Ashley\Desktop\Device-project\proj-VanLaerAshley\BarTender.Android\obj\Debug\lp\7.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Users\Ashley\Desktop\Device-project\proj-VanLaerAshley\BarTender.Android\obj\Debug\lp\8.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Users\Ashley\Desktop\Device-project\proj-VanLaerAshley\BarTender.Android\obj\Debug\lp\9.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Users\Ashley\Desktop\Device-project\proj-VanLaerAshley\BarTender.Android\obj\Debug\lp\10.stamp</ResolvedResourceDirectoryStamp>
+  </ResolvedResourceDirectoryStamps>
 </Paths>

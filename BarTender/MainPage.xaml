@@ -1,16 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             xmlns:local="clr-namespace:BarTender" 
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BarTender.View.TabbedPageHOME"
              x:Class="BarTender.MainPage"
-             NavigationPage.HasNavigationBar="False">
-    <StackLayout>
-        
-        
-
-        <Grid Grid.Row="2" Margin="3,0">
-            <Button x:Name="btnGoToList" Text="Show All Cocktails" Clicked="btnGoToList_Clicked" />
-        </Grid>
-       
-    </StackLayout>
-</ContentPage>
+            Title="Bart Tender">
+    <local:SearchPage Title="Search"/>
+    <local:FavoritePage Title="Favorites" />
+</TabbedPage>

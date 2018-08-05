@@ -120,5 +120,31 @@ namespace BarTender.Model
             }
             return null;
         }
+        public async static Task<List<Drink>> GetCategory()
+        {
+            try
+            {
+                String url = String.Format("https://www.thecocktaildb.com/api/json/v1/{0}/list.php?c=list", APIKEY);
+
+                string result;
+                using (HttpClient client = new HttpClient())
+                {
+
+                    client.DefaultRequestHeaders.Add("Accept", "application/json");
+                    result = await client.GetStringAsync(url);
+                }
+
+                RootObjectDrinks rootObject = JsonConvert.DeserializeObject<RootObjectDrinks>(result);
+                List<Drink> drinks = rootObject.drinks.ToList();
+
+                return drinks;
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+                Debug.WriteLine(e);
+            }
+            return null;
+        }
     }
 }

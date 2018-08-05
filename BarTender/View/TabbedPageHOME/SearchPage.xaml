@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BarTender.View.TabbedPageHOME.SearchPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Picker x:Name="pickCategory" Title="Show Cocktails by category" Margin="30,0,30,0"/>
+            <Button x:Name="btnGoToList" Text="Show All Cocktails" Clicked="btnGoToList_Clicked" WidthRequest="50" HeightRequest="50" BackgroundColor="#3F51B5" TextColor="White" Margin="30,30,30,30"/>
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
