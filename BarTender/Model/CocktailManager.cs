@@ -147,7 +147,7 @@ namespace BarTender.Model
             return null;
         }
 
-        public async static Task<List<Drink>> getEventByCategory(string category)
+        public async static Task<List<Drink>> getCocktailByCategory(string category)
         {
             String url = String.Format("https://www.thecocktaildb.com/api/json/v1/{0}/filter.php?c={1}", APIKEY, category);
             string result;

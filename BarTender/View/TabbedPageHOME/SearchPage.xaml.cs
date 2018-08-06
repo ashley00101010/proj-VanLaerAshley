@@ -41,7 +41,7 @@ namespace BarTender.View.TabbedPageHOME
             {
                 lblLoading.IsVisible = true;
                 string selectedCategory = pickCategory.SelectedItem as string;
-                List<Drink> drinks = await CocktailManager.getEventByCategory(selectedCategory);
+                List<Drink> drinks = await CocktailManager.getCocktailByCategory(selectedCategory);
                 string filterdString = "Category: " + selectedCategory;
                 await Navigation.PushAsync(new FilterdListPage(drinks, filterdString));
                 lblLoading.IsVisible = false;
