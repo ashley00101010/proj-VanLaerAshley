@@ -15,3 +15,4 @@ C:\Users\Ashley\Desktop\Device-project\proj-VanLaerAshley\BarTender\obj\Debug\ne
 C:\Users\Ashley\Desktop\Device-project\proj-VanLaerAshley\BarTender\obj\Debug\netstandard2.0\BarTender.AssemblyInfo.cs
 C:\Users\Ashley\Desktop\Device-project\proj-VanLaerAshley\BarTender\obj\Debug\netstandard2.0\BarTender.dll
 C:\Users\Ashley\Desktop\Device-project\proj-VanLaerAshley\BarTender\obj\Debug\netstandard2.0\BarTender.pdb
+C:\Users\Ashley\Desktop\Device-project\proj-VanLaerAshley\BarTender\obj\Debug\netstandard2.0\BarTender.csprojAssemblyReference.cache

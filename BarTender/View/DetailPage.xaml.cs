@@ -50,8 +50,11 @@ namespace BarTender.View
                         + "\n " + Cocktail.drinks[0].strMeasure14 + Cocktail.drinks[0].strIngredient14
                         + "\n " + Cocktail.drinks[0].strMeasure15 + Cocktail.drinks[0].strIngredient15;
 
+          
+
             lblIngredients1.Text = Ingredients1;
             lblIngredients2.Text = Ingredients2;
+
 
 
 

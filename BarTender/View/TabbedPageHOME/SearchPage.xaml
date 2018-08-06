@@ -6,10 +6,9 @@
              BackgroundColor="White">
     <ContentPage.Content>
         <StackLayout>
-
-            <Picker x:Name="pickCategory" Title="Show Cocktails by category" Margin="30,0,30,0"/>
+            <Label Text="Loading, please wait..." x:Name="lblLoading" IsVisible="False" HorizontalOptions="CenterAndExpand" />
+            <Picker x:Name="pickCategory" Title="Show Cocktails by category" SelectedIndexChanged="pickCategory_SelectedIndexChanged" Margin="30,30,30,0"/>
             <Button x:Name="btnGoToList" Text="Show All Cocktails" Clicked="btnGoToList_Clicked" WidthRequest="50" HeightRequest="50" BackgroundColor="#3F51B5" TextColor="White" Margin="30,30,30,30"/>
-
 
 
         </StackLayout>

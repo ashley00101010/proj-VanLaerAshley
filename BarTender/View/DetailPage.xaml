@@ -8,12 +8,12 @@
     <ContentPage.Content>
         <StackLayout>
             <ScrollView>
-            <Grid>
+                <Grid RowSpacing="0">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="0" />
-                        <RowDefinition Height="0.5*" />
+                        <RowDefinition Height="300" />
+                        <RowDefinition Height="1*" />
                     </Grid.RowDefinitions>
-                    <StackLayout Margin="0" Padding="0" Grid.Row="1">
+                    <StackLayout Margin="0" Padding="0" Grid.Row="0">
                         <Grid RowSpacing="0">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="3*" />
@@ -25,25 +25,23 @@
                             <Label x:Name="lblName" Grid.Row="1" FontSize="Medium" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"  BackgroundColor="#BB000000" TextColor="White"  />
                             <Label x:Name="lblCategory" Grid.Row="2" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"  BackgroundColor="#BB000000" TextColor="White"  />
 
-                            </Grid>
+                        </Grid>
                     </StackLayout>
-                    <StackLayout Grid.Row="2" Margin="16, 8">
-                        <Label Text="Ingredients" FontSize="Large" TextColor="Black" HorizontalTextAlignment="Center" />
+
+                    <StackLayout Margin="16, 8" Grid.Row="1">
+                        <Label Text="Ingredients:" FontSize="Large" TextColor="Black" HorizontalTextAlignment="Start"  Margin="0,20,0,0"/>
                         <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="0" />
-                            </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="0" />
+                                <ColumnDefinition Width="1*" />
                                 <ColumnDefinition Width="1*" />
                             </Grid.ColumnDefinitions>
-                            <Label Grid.Column="1" Grid.Row="1" x:Name="lblIngredients1" Text="" VerticalTextAlignment="Start" HorizontalTextAlignment="Start" />
-                            <Label Grid.Column="2" Grid.Row="1" x:Name="lblIngredients2" Text="" VerticalTextAlignment="Start" HorizontalTextAlignment="Start" />
+                            <Label Grid.Column="0" x:Name="lblIngredients1" VerticalTextAlignment="Start" HorizontalTextAlignment="Start" Margin="0,18,0,0" />
+                            <Label Grid.Column="1"  x:Name="lblIngredients2" VerticalTextAlignment="Start" HorizontalTextAlignment="Start" />
                         </Grid>
-                        <Label Text="Instructions" FontSize="Large" TextColor="Black" HorizontalTextAlignment="Center" />
-                        <Label x:Name="lblDescription"  HorizontalTextAlignment="Center" />
-                        <Button Text="Save" Clicked="OnSaveClicked" x:Name="btnSave" IsVisible="True"/>
-                        <Button Text="Delete" Clicked="OnDeleteClicked" x:Name="btnDelete" IsVisible="True" />
+                        <Label Text="Instructions:" FontSize="Large" TextColor="Black" HorizontalTextAlignment="Start" Margin="0,20,0,20" />
+                        <Label x:Name="lblDescription"  HorizontalTextAlignment="Start" />
+                        <Button Text="Add to Favorites" Clicked="OnSaveClicked" x:Name="btnSave" IsVisible="True"  WidthRequest="50" HeightRequest="50" BackgroundColor="#3F51B5" TextColor="White" Margin="0,30,0,30"/>
+                        <Button Text="Delete from Favorites" Clicked="OnDeleteClicked" x:Name="btnDelete" IsVisible="True"  WidthRequest="50" HeightRequest="50" BackgroundColor="#3F51B5" TextColor="White" Margin="0,30,0,30"/>
                     </StackLayout>
                 </Grid>
             </ScrollView>

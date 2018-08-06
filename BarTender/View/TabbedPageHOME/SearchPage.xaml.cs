@@ -1,6 +1,7 @@
 ﻿using BarTender.Model;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,5 +34,25 @@ namespace BarTender.View.TabbedPageHOME
             }
             pickCategory.ItemsSource = categories;
         }
+
+        private async void pickCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                lblLoading.IsVisible = true;
+                string selectedCategory = pickCategory.SelectedItem as string;
+                List<Drink> drinks = await CocktailManager.getEventByCategory(selectedCategory);
+                string filterdString = "Category: " + selectedCategory;
+                await Navigation.PushAsync(new FilterdListPage(drinks, filterdString));
+                lblLoading.IsVisible = false;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+                Debug.WriteLine(ex);
+            }
+        }
+
+        
     }
 }

@@ -212,6 +212,7 @@ C:\Users\Ashley\Desktop\Device-project\proj-VanLaerAshley\BarTender.Android\obj\
 C:\Users\Ashley\Desktop\Device-project\proj-VanLaerAshley\BarTender.Android\obj\Debug\android\assets\Xamarin.Forms.Core.pdb
 C:\Users\Ashley\Desktop\Device-project\proj-VanLaerAshley\BarTender.Android\obj\Debug\android\assets\Xamarin.Forms.Xaml.pdb
 C:\Users\Ashley\Desktop\Device-project\proj-VanLaerAshley\BarTender.Android\bin\Debug\BarTender.Android.dll
+C:\Users\Ashley\Desktop\Device-project\proj-VanLaerAshley\BarTender.Android\obj\Debug\linksrc\BarTender.pdb
 C:\Users\Ashley\Desktop\Device-project\proj-VanLaerAshley\BarTender.Android\obj\Debug\linksrc\BarTender.Android.dll.mdb
 C:\Users\Ashley\Desktop\Device-project\proj-VanLaerAshley\BarTender.Android\obj\Debug\linksrc\FormsViewGroup.dll.mdb
 C:\Users\Ashley\Desktop\Device-project\proj-VanLaerAshley\BarTender.Android\obj\Debug\linksrc\Plugin.Connectivity.dll.mdb
