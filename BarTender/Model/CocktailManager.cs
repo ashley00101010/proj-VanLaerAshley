@@ -147,9 +147,55 @@ namespace BarTender.Model
             return null;
         }
 
+        public async static Task<List<Drink>> GetGlass()
+        {
+            try
+            {
+                String url = String.Format("https://www.thecocktaildb.com/api/json/v1/{0}/list.php?g=list", APIKEY);
+
+                string result;
+                using (HttpClient client = new HttpClient())
+                {
+
+                    client.DefaultRequestHeaders.Add("Accept", "application/json");
+                    result = await client.GetStringAsync(url);
+                }
+
+                RootObjectDrinks rootObject = JsonConvert.DeserializeObject<RootObjectDrinks>(result);
+                List<Drink> drinks = rootObject.drinks.ToList();
+
+                return drinks;
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+                Debug.WriteLine(e);
+            }
+            return null;
+        }
+    
+
         public async static Task<List<Drink>> getCocktailByCategory(string category)
         {
             String url = String.Format("https://www.thecocktaildb.com/api/json/v1/{0}/filter.php?c={1}", APIKEY, category);
+            string result;
+
+            using (HttpClient client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Add("Accept", "application/json");
+                result = await client.GetStringAsync(url);
+            }
+
+            RootObjectDrinks rootobject = JsonConvert.DeserializeObject<RootObjectDrinks>(result);
+            List<Drink> drinks = rootobject.drinks.ToList();
+
+            return drinks;
+
+        }
+
+        public async static Task<List<Drink>> getCocktailByGlass(string glass)
+        {
+            String url = String.Format("https://www.thecocktaildb.com/api/json/v1/{0}/filter.php?g={1}", APIKEY, glass);
             string result;
 
             using (HttpClient client = new HttpClient())

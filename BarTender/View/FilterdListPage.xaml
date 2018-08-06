@@ -7,10 +7,13 @@
              BackgroundColor="White">
     <ContentPage.Content >
         <StackLayout>
-        <SearchBar x:Name="searchDrinks" Placeholder="Search" HorizontalTextAlignment="Start" SearchButtonPressed="searchDrinks_SearchButtonPressed" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand"/>
-            <StackLayout Margin="16,0" >
-                <Label x:Name="NoCocktails" Text="There were no Cocktails found." IsVisible="False" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"/>
-
+            <StackLayout>
+                <SearchBar x:Name="searchDrinks" Placeholder="Search" HorizontalTextAlignment="Start" SearchButtonPressed="searchDrinks_SearchButtonPressed" HorizontalOptions="Start" VerticalOptions="Start"/>
+                <Picker x:Name="pickCategory" Title="Click here for all categories" SelectedIndexChanged="pickCategory_SelectedIndexChanged"  Margin="30,0,30,0"/>
+                <Picker x:Name="pickGlass" Title="Show Glass by category" SelectedIndexChanged="pickGlass_SelectedIndexChanged" Margin="30,0,30,0"/>
+            </StackLayout>
+            <StackLayout Margin="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <Label x:Name="NoCocktails" Text="Sorry, there were no cocktails found." IsVisible="False" HorizontalOptions="CenterAndExpand"/>
                 <Label Text="Loading, please wait..." x:Name="lblLoading" IsVisible="False" HorizontalOptions="CenterAndExpand" />
                 <ListView  x:Name="lvwDrinks" RowHeight="200" ItemSelected="lvwCocktails_Itemseleceted">
 
@@ -18,7 +21,7 @@
                         <DataTemplate>
                             <CustomControls:ExtendedViewCell SelectedBackgroundColor="White">
                                 <Grid>
-                                    <Frame BackgroundColor="White" Margin="16" Padding="0">
+                                    <Frame BackgroundColor="White" Margin="32,16,32,16" Padding="0">
                                         <Grid RowSpacing="0">
                                             <Grid.RowDefinitions>
                                                 <RowDefinition Height="3*" />
@@ -35,7 +38,6 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

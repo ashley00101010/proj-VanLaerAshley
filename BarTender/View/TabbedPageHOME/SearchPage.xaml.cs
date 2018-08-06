@@ -15,11 +15,12 @@ namespace BarTender.View.TabbedPageHOME
 	public partial class SearchPage : ContentPage
 	{
         public List<string> categories = new List<string>();
+        public List<string> glasses = new List<string>();
         public SearchPage ()
 		{
 			InitializeComponent ();
             getCategories();
-
+            getGlasses();
         }
         private void btnGoToList_Clicked(object sender, EventArgs e)
         {
@@ -35,6 +36,16 @@ namespace BarTender.View.TabbedPageHOME
             pickCategory.ItemsSource = categories;
         }
 
+        public async void getGlasses()
+        {
+            List<Drink> drinkList = await CocktailManager.GetGlass();
+            for (var i = 0; i < drinkList.Count; i++)
+            {
+                glasses.Add(drinkList[i].strGlass);
+            }
+            pickGlass.ItemsSource = glasses;
+        }
+
         private async void pickCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -44,7 +55,29 @@ namespace BarTender.View.TabbedPageHOME
                 string selectedCategory = pickCategory.SelectedItem as string;
                 List<Drink> drinks = await CocktailManager.getCocktailByCategory(selectedCategory);
                 string filterdString = "Category: " + selectedCategory;
-                await Navigation.PushAsync(new FilterdListPage(drinks, filterdString));
+                string categoryPar = "Category";
+                await Navigation.PushAsync(new FilterdListPage(drinks, filterdString, categoryPar));
+                btnGoToList.Margin = new Thickness(30, 30, 30, 30);
+                lblLoading.IsVisible = false;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+                Debug.WriteLine(ex);
+            }
+        }
+
+        private async void pickGlass_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                lblLoading.IsVisible = true;
+                btnGoToList.Margin = new Thickness(30, 30, 30, 0);
+                string selectedGlass = pickGlass.SelectedItem as string;
+                List<Drink> drinks = await CocktailManager.getCocktailByGlass(selectedGlass);
+                string filterdString = "Glass: " + selectedGlass;
+                string glassPar = "Glass";
+                await Navigation.PushAsync(new FilterdListPage(drinks, filterdString, glassPar));
                 btnGoToList.Margin = new Thickness(30, 30, 30, 30);
                 lblLoading.IsVisible = false;
             }
@@ -74,7 +107,8 @@ namespace BarTender.View.TabbedPageHOME
                 }
                 lblLoading.IsVisible = false;
                 btnGoToList.Margin = new Thickness(30, 30, 30, 30);
-                await Navigation.PushAsync(new FilterdListPage(drinks, filterdString));
+                string searchPar = "Search";
+                await Navigation.PushAsync(new FilterdListPage(drinks, filterdString, searchPar));
             }
         }
 

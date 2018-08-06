@@ -7,7 +7,7 @@
              BackgroundColor="White">
 
     <ContentPage.Content >
-        <StackLayout Margin="16,0" >
+        <StackLayout Margin="0" >
             <Label Text="Loading, please wait..." x:Name="lblLoading" IsVisible="False" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
             <ListView  x:Name="lvwFavorites" RowHeight="200" ItemSelected="lvwFavorites_Itemseleceted">
                 <!--Please uncomment the itemtemplate below AFTER you tested the itemssource as text-->
@@ -15,7 +15,7 @@
                     <DataTemplate>
                         <CustomControls:ExtendedViewCell SelectedBackgroundColor="White">
                             <Grid>
-                                <Frame BackgroundColor="White" Margin="16" Padding="0">
+                                <Frame BackgroundColor="White" Margin="32,16,32,16" Padding="0">
                                     <Grid RowSpacing="0">
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="3*" />

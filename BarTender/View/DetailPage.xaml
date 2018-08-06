@@ -41,7 +41,7 @@
                         <Label Text="Instructions:" FontSize="Large" TextColor="Black" HorizontalTextAlignment="Start" Margin="0,20,0,20" />
                         <Label x:Name="lblDescription"  HorizontalTextAlignment="Start" />
                         <Button Text="Add to Favorites" Clicked="OnSaveClicked" x:Name="btnSave" IsVisible="True"  WidthRequest="50" HeightRequest="50" BackgroundColor="#3F51B5" TextColor="White" Margin="0,30,0,30"/>
-                        <Button Text="Delete from Favorites" Clicked="OnDeleteClicked" x:Name="btnDelete" IsVisible="True"  WidthRequest="50" HeightRequest="50" BackgroundColor="#3F51B5" TextColor="White" Margin="0,30,0,30"/>
+                        <Button Text="Delete from Favorites" Clicked="OnDeleteClicked" x:Name="btnDelete" IsVisible="True"  WidthRequest="50" HeightRequest="50" BackgroundColor="#FF6961" TextColor="White" Margin="0,30,0,30"/>
                     </StackLayout>
                 </Grid>
             </ScrollView>
