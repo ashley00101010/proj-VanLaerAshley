@@ -10,7 +10,7 @@
             <StackLayout>
                 <SearchBar x:Name="searchDrinks" Placeholder="Search" HorizontalTextAlignment="Start" SearchButtonPressed="searchDrinks_SearchButtonPressed" HorizontalOptions="Start" VerticalOptions="Start"/>
                 <Picker x:Name="pickCategory" Title="Click here for all categories" SelectedIndexChanged="pickCategory_SelectedIndexChanged"  Margin="30,0,30,0"/>
-                <Picker x:Name="pickGlass" Title="Show Glass by category" SelectedIndexChanged="pickGlass_SelectedIndexChanged" Margin="30,0,30,0"/>
+                <Picker x:Name="pickGlass" Title="Show cocktail by glass" SelectedIndexChanged="pickGlass_SelectedIndexChanged" Margin="30,0,30,0"/>
             </StackLayout>
             <StackLayout Margin="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
                 <Label x:Name="NoCocktails" Text="Sorry, there were no cocktails found." IsVisible="False" HorizontalOptions="CenterAndExpand"/>
