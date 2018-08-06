@@ -6,11 +6,17 @@
              BackgroundColor="White">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Loading, please wait..." x:Name="lblLoading" IsVisible="False" HorizontalOptions="CenterAndExpand" />
-            <Picker x:Name="pickCategory" Title="Show Cocktails by category" SelectedIndexChanged="pickCategory_SelectedIndexChanged" Margin="30,30,30,0"/>
-            <Button x:Name="btnGoToList" Text="Show All Cocktails" Clicked="btnGoToList_Clicked" WidthRequest="50" HeightRequest="50" BackgroundColor="#3F51B5" TextColor="White" Margin="30,30,30,30"/>
-
-
+            <ScrollView>
+                <StackLayout>
+                    <Label Text="Search For Cocktails" HorizontalTextAlignment="Start" FontSize="Medium" Margin="30,30,30,0"/>
+                    <SearchBar x:Name="searchDrinks" Placeholder="Search" HorizontalTextAlignment="Start" SearchButtonPressed="searchDrinks_SearchButtonPressed" Margin="0,0,30,0"/>
+                    <Label Text="Categories" HorizontalTextAlignment="Start" FontSize="Medium" Margin="30,30,30,0"/>
+                    <Picker x:Name="pickCategory" Title="Show Cocktails by category" SelectedIndexChanged="pickCategory_SelectedIndexChanged" Margin="30,0,30,0"/>
+                
+                </StackLayout>
+            </ScrollView>
+            <Button x:Name="btnGoToList" Text="Show All Cocktails" Clicked="btnGoToList_Clicked" VerticalOptions="EndAndExpand" WidthRequest="50" HeightRequest="50" BackgroundColor="#3F51B5" TextColor="White" Margin="30,30,30,30"/>
+            <Label Text="Loading, please wait..." x:Name="lblLoading" IsVisible="False" HorizontalOptions="CenterAndExpand" Margin="0,0,0,10" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

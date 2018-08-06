@@ -6,31 +6,37 @@
              NavigationPage.HasNavigationBar="True"
              BackgroundColor="White">
     <ContentPage.Content >
-        <StackLayout Margin="16,0" >
-            <ListView  x:Name="lvwDrinks" RowHeight="200" ItemSelected="lvwCocktails_Itemseleceted">
-                <!--Please uncomment the itemtemplate below AFTER you tested the itemssource as text-->
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <CustomControls:ExtendedViewCell SelectedBackgroundColor="White">
-                            <Grid>
-                                <Frame BackgroundColor="White" Margin="16" Padding="0">
-                                    <Grid RowSpacing="0">
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="3*" />
-                                            <RowDefinition Height="1*" />
-                                            <RowDefinition Height="0.75*" />
-                                        </Grid.RowDefinitions>
-                                        <Image Source="{Binding strDrinkThumb}" Grid.RowSpan="3" Aspect="AspectFill" />
-                                        <Label Text="{Binding strDrink}" Grid.Row="1" FontSize="Medium" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"  BackgroundColor="#BB000000" TextColor="White"  />
-                                        <Label Text="Click for details" Grid.Row="2" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"  BackgroundColor="#BB000000" TextColor="White"  />
-                                    </Grid>
-                                </Frame>
-                            </Grid>
-                        </CustomControls:ExtendedViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+        <StackLayout>
+        <SearchBar x:Name="searchDrinks" Placeholder="Search" HorizontalTextAlignment="Start" SearchButtonPressed="searchDrinks_SearchButtonPressed" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand"/>
+            <StackLayout Margin="16,0" >
+                <Label x:Name="NoCocktails" Text="There were no Cocktails found." IsVisible="False" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"/>
 
+                <Label Text="Loading, please wait..." x:Name="lblLoading" IsVisible="False" HorizontalOptions="CenterAndExpand" />
+                <ListView  x:Name="lvwDrinks" RowHeight="200" ItemSelected="lvwCocktails_Itemseleceted">
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <CustomControls:ExtendedViewCell SelectedBackgroundColor="White">
+                                <Grid>
+                                    <Frame BackgroundColor="White" Margin="16" Padding="0">
+                                        <Grid RowSpacing="0">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="3*" />
+                                                <RowDefinition Height="1*" />
+                                                <RowDefinition Height="0.75*" />
+                                            </Grid.RowDefinitions>
+                                            <Image Source="{Binding strDrinkThumb}" Grid.RowSpan="3" Aspect="AspectFill" />
+                                            <Label Text="{Binding strDrink}" Grid.Row="1" FontSize="Medium" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"  BackgroundColor="#BB000000" TextColor="White"  />
+                                            <Label Text="Click for details" Grid.Row="2" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"  BackgroundColor="#BB000000" TextColor="White"  />
+                                        </Grid>
+                                    </Frame>
+                                </Grid>
+                            </CustomControls:ExtendedViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

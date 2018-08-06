@@ -40,10 +40,12 @@ namespace BarTender.View.TabbedPageHOME
             try
             {
                 lblLoading.IsVisible = true;
+                btnGoToList.Margin = new Thickness(30, 30, 30, 0);
                 string selectedCategory = pickCategory.SelectedItem as string;
                 List<Drink> drinks = await CocktailManager.getCocktailByCategory(selectedCategory);
                 string filterdString = "Category: " + selectedCategory;
                 await Navigation.PushAsync(new FilterdListPage(drinks, filterdString));
+                btnGoToList.Margin = new Thickness(30, 30, 30, 30);
                 lblLoading.IsVisible = false;
             }
             catch (Exception ex)
@@ -53,6 +55,28 @@ namespace BarTender.View.TabbedPageHOME
             }
         }
 
-        
+        private async void searchDrinks_SearchButtonPressed(object sender, EventArgs e)
+        {
+            lblLoading.IsVisible = true;
+            btnGoToList.Margin = new Thickness(30,30,30,0); 
+            string searchInput = searchDrinks.Text;
+            if (searchInput != "")
+            {
+                List<Drink> drinks = await CocktailManager.getCocktailBySearch(searchInput);
+                string filterdString = null;
+                if (drinks == null)
+                {
+                    filterdString = "Nothing found for: " + searchInput;
+                }
+                else
+                {
+                    filterdString = "Search Results: " + searchInput;
+                }
+                lblLoading.IsVisible = false;
+                btnGoToList.Margin = new Thickness(30, 30, 30, 30);
+                await Navigation.PushAsync(new FilterdListPage(drinks, filterdString));
+            }
+        }
+
     }
 }

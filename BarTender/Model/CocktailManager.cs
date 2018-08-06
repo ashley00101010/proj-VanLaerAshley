@@ -164,5 +164,31 @@ namespace BarTender.Model
             return drinks;
 
         }
+        public async static Task<List<Drink>> getCocktailBySearch(string search)
+        {
+            try
+            {
+                String url = String.Format("https://www.thecocktaildb.com/api/json/v1/{0}/search.php?s={1}", APIKEY, search);
+                string result;
+
+                using (HttpClient client = new HttpClient())
+                {
+                    client.DefaultRequestHeaders.Add("Accept", "application/json");
+                    result = await client.GetStringAsync(url);
+                }
+
+                RootObjectDrinks rootobject = JsonConvert.DeserializeObject<RootObjectDrinks>(result);
+                List<Drink> drinks = rootobject.drinks.ToList();
+
+                return drinks;
+            }
+           catch(Exception e)
+            {
+                Debug.WriteLine(e.Message);
+                Debug.WriteLine(e);
+            }
+            return null;
+
+        }
     }
 }
