@@ -15,3 +15,12 @@ C:\Users\Ashley\Desktop\Device-project\proj-VanLaerAshley\BarTender\obj\Debug\ne
 C:\Users\Ashley\Desktop\Device-project\proj-VanLaerAshley\BarTender\obj\Debug\netstandard2.0\BarTender.AssemblyInfo.cs
 C:\Users\Ashley\Desktop\Device-project\proj-VanLaerAshley\BarTender\obj\Debug\netstandard2.0\BarTender.dll
 C:\Users\Ashley\Desktop\Device-project\proj-VanLaerAshley\BarTender\obj\Debug\netstandard2.0\BarTender.pdb
+C:\Users\Ashley\Desktop\DeviceProg\Device-project\proj-VanLaerAshley\BarTender\bin\Debug\netstandard2.0\BarTender.deps.json
+C:\Users\Ashley\Desktop\DeviceProg\Device-project\proj-VanLaerAshley\BarTender\bin\Debug\netstandard2.0\BarTender.dll
+C:\Users\Ashley\Desktop\DeviceProg\Device-project\proj-VanLaerAshley\BarTender\bin\Debug\netstandard2.0\BarTender.pdb
+C:\Users\Ashley\Desktop\DeviceProg\Device-project\proj-VanLaerAshley\BarTender\obj\Debug\netstandard2.0\BarTender.csprojAssemblyReference.cache
+C:\Users\Ashley\Desktop\DeviceProg\Device-project\proj-VanLaerAshley\BarTender\obj\Debug\netstandard2.0\BarTender.csproj.CoreCompileInputs.cache
+C:\Users\Ashley\Desktop\DeviceProg\Device-project\proj-VanLaerAshley\BarTender\obj\Debug\netstandard2.0\BarTender.AssemblyInfoInputs.cache
+C:\Users\Ashley\Desktop\DeviceProg\Device-project\proj-VanLaerAshley\BarTender\obj\Debug\netstandard2.0\BarTender.AssemblyInfo.cs
+C:\Users\Ashley\Desktop\DeviceProg\Device-project\proj-VanLaerAshley\BarTender\obj\Debug\netstandard2.0\BarTender.dll
+C:\Users\Ashley\Desktop\DeviceProg\Device-project\proj-VanLaerAshley\BarTender\obj\Debug\netstandard2.0\BarTender.pdb

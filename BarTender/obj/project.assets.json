@@ -3693,11 +3693,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ashley\\Desktop\\Device-project\\proj-VanLaerAshley\\BarTender\\BarTender.csproj",
+      "projectUniqueName": "C:\\Users\\Ashley\\Desktop\\DeviceProg\\Device-project\\proj-VanLaerAshley\\BarTender\\BarTender.csproj",
       "projectName": "BarTender",
-      "projectPath": "C:\\Users\\Ashley\\Desktop\\Device-project\\proj-VanLaerAshley\\BarTender\\BarTender.csproj",
+      "projectPath": "C:\\Users\\Ashley\\Desktop\\DeviceProg\\Device-project\\proj-VanLaerAshley\\BarTender\\BarTender.csproj",
       "packagesPath": "C:\\Users\\Ashley\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ashley\\Desktop\\Device-project\\proj-VanLaerAshley\\BarTender\\obj\\",
+      "outputPath": "C:\\Users\\Ashley\\Desktop\\DeviceProg\\Device-project\\proj-VanLaerAshley\\BarTender\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

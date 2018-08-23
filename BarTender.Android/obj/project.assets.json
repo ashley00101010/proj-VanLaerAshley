@@ -3003,11 +3003,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ashley\\Desktop\\Device-project\\proj-VanLaerAshley\\BarTender.Android\\BarTender.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Ashley\\Desktop\\DeviceProg\\Device-project\\proj-VanLaerAshley\\BarTender.Android\\BarTender.Android.csproj",
       "projectName": "BarTender.Android",
-      "projectPath": "C:\\Users\\Ashley\\Desktop\\Device-project\\proj-VanLaerAshley\\BarTender.Android\\BarTender.Android.csproj",
+      "projectPath": "C:\\Users\\Ashley\\Desktop\\DeviceProg\\Device-project\\proj-VanLaerAshley\\BarTender.Android\\BarTender.Android.csproj",
       "packagesPath": "C:\\Users\\Ashley\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ashley\\Desktop\\Device-project\\proj-VanLaerAshley\\BarTender.Android\\obj\\",
+      "outputPath": "C:\\Users\\Ashley\\Desktop\\DeviceProg\\Device-project\\proj-VanLaerAshley\\BarTender.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -3024,8 +3024,8 @@
       "frameworks": {
         "monoandroid81": {
           "projectReferences": {
-            "C:\\Users\\Ashley\\Desktop\\Device-project\\proj-VanLaerAshley\\BarTender\\BarTender.csproj": {
-              "projectPath": "C:\\Users\\Ashley\\Desktop\\Device-project\\proj-VanLaerAshley\\BarTender\\BarTender.csproj"
+            "C:\\Users\\Ashley\\Desktop\\DeviceProg\\Device-project\\proj-VanLaerAshley\\BarTender\\BarTender.csproj": {
+              "projectPath": "C:\\Users\\Ashley\\Desktop\\DeviceProg\\Device-project\\proj-VanLaerAshley\\BarTender\\BarTender.csproj"
             }
           }
         }

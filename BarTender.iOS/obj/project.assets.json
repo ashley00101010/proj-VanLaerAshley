@@ -3948,11 +3948,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ashley\\Desktop\\Device-project\\proj-VanLaerAshley\\BarTender.iOS\\BarTender.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\Ashley\\Desktop\\DeviceProg\\Device-project\\proj-VanLaerAshley\\BarTender.iOS\\BarTender.iOS.csproj",
       "projectName": "BarTender.iOS",
-      "projectPath": "C:\\Users\\Ashley\\Desktop\\Device-project\\proj-VanLaerAshley\\BarTender.iOS\\BarTender.iOS.csproj",
+      "projectPath": "C:\\Users\\Ashley\\Desktop\\DeviceProg\\Device-project\\proj-VanLaerAshley\\BarTender.iOS\\BarTender.iOS.csproj",
       "packagesPath": "C:\\Users\\Ashley\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ashley\\Desktop\\Device-project\\proj-VanLaerAshley\\BarTender.iOS\\obj\\",
+      "outputPath": "C:\\Users\\Ashley\\Desktop\\DeviceProg\\Device-project\\proj-VanLaerAshley\\BarTender.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -3969,8 +3969,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\Ashley\\Desktop\\Device-project\\proj-VanLaerAshley\\BarTender\\BarTender.csproj": {
-              "projectPath": "C:\\Users\\Ashley\\Desktop\\Device-project\\proj-VanLaerAshley\\BarTender\\BarTender.csproj"
+            "C:\\Users\\Ashley\\Desktop\\DeviceProg\\Device-project\\proj-VanLaerAshley\\BarTender\\BarTender.csproj": {
+              "projectPath": "C:\\Users\\Ashley\\Desktop\\DeviceProg\\Device-project\\proj-VanLaerAshley\\BarTender\\BarTender.csproj"
             }
           }
         }
